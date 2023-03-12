@@ -25,8 +25,7 @@ jobs:
               uses: actions/upload-artifact@v2
               with:
                   name: textidote_report
-                  working_directory: doc/text/
-                  path: report.html
+                  path: doc/text/report.html
             - name: Throw error if linter warnings exist
               if: ${{ steps.lint.outputs.num_warnings != 0 }}
               run: 'echo "::error file=project.tex::num_warnings: ${{ steps.lint.outputs.num_warnings }}"; exit 1;'
