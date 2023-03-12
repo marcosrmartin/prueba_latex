@@ -28,4 +28,4 @@ jobs:
                   path: report.html
             - name: Throw error if linter warnings exist
               if: ${{ steps.lint.outputs.num_warnings != 0 }}
-              run: 'echo "::error file=main.tex::num_warnings: ${{ steps.lint.outputs.num_warnings }}"; exit 1;'
+              run: 'echo "::error file=project.tex::num_warnings: ${{ steps.lint.outputs.num_warnings }}"; exit 1;'
