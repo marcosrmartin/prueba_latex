@@ -25,6 +25,7 @@ jobs:
               uses: actions/upload-artifact@v2
               with:
                   name: textidote_report
+                  working_directory: doc/text/
                   path: report.html
             - name: Throw error if linter warnings exist
               if: ${{ steps.lint.outputs.num_warnings != 0 }}
