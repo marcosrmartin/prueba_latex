@@ -17,7 +17,6 @@ jobs:
                   ## Implied defaults:
                   # report_type: html
                   # report_file: report.html
-
                   ## Use this setting to pass custom arguments options to
                   ## TeXtidote (such as what grammar checker to use).
                   # args:
