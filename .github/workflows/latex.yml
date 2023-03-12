@@ -12,6 +12,7 @@ jobs:
               with:
                   root_file: project.tex
                   working_directory: doc/text/
+                  args: --check es
 
                   ## Implied defaults:
                   # report_type: html
