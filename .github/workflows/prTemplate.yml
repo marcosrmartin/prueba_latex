@@ -11,7 +11,7 @@ jobs:
         uses: actions/github-script@v3
         with:
           script: |
-            const checklist = /\s*[-\*]\s+\[\s*([xX]?)\s*\]\s+([A-Z]*):?/gm
+            const checklist = /\s*[-\*]\s+\[\s*([xX]?)\s*\]\s+([A-z ]*):?/gm
             const body = context.payload.pull_request.body
             core.notice(body)
             let match = checklist.exec(body)
