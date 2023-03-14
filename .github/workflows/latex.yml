@@ -1,5 +1,7 @@
 name: TeXtidote Action
-on: pull_request
+on:
+  pull_request:
+    types: [opened,edited]
 jobs:
     lint_latex:
         runs-on: ubuntu-latest
@@ -14,13 +16,6 @@ jobs:
                   working_directory: doc/text/
                   args: --check es
 
-                  ## Implied defaults:
-                  # report_type: html
-                  # report_file: report.html
-
-                  ## Use this setting to pass custom arguments options to
-                  ## TeXtidote (such as what grammar checker to use).
-                  # args:
             - name: Upload TeXtidote report
               uses: actions/upload-artifact@v2
               with:
