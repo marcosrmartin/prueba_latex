@@ -1,0 +1,9 @@
+name: Se han hecho las tareas previas al PR
+on:
+  pull_request:
+    types: [opened,edited]
+
+jobs:
+  prueba:
+    -name: "test"
+      uses: ./prTemplate
