@@ -1,7 +1,8 @@
 name: TeXtidote Action
 on:
-  pull_request:
-    types: [opened,edited]
+  push:
+    paths:
+      - "/doc"
 jobs:
   lint_latex:
     runs-on: ubuntu-latest
