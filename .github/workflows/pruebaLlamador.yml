@@ -6,7 +6,7 @@ on:
 
 jobs:
   call-workflow-passing-data:
-    uses: marcosrmartin/prueba_latex/.github/workflows/testAction.yml@main
+    uses: ./.github/workflows/testAction.yml
     with:
       config-path: .github/labeler.yml
     secrets:
