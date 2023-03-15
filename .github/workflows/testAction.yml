@@ -1,9 +1,20 @@
-name: test
+name: Reusable 
+
 on:
-  pull_request:
-    types: [opened,edited]
+  workflow_call:
+    inputs:
+      config-path:
+        required: false
+        type: string
+    secrets:
+      token:
+        required: false
 
 jobs:
-  prueba:
-    -name: "test"
-      uses: ./prTemplate
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/labeler@v4
+      with:
+        repo-token: ${{ secrets.token }}
+        configuration-path: ${{ inputs.config-path }}
