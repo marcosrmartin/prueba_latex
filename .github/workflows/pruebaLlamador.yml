@@ -1,3 +1,9 @@
+name: llamador
+
+on:
+  pull_request:
+    types: [opened,edited]
+
 jobs:
   call-workflow-passing-data:
     uses: marcosrmartin/prueba_latex/.github/workflows/testAction.yml@v1
