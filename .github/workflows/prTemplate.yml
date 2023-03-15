@@ -2,6 +2,8 @@ name: Se han hecho las tareas previas al PR
 on:
   pull_request:
     types: [opened,edited]
+    paths: 
+      - "doc/"
 
 jobs:
   get-checks:
