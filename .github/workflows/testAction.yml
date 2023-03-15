@@ -1,4 +1,4 @@
-name: Se han hecho las tareas previas al PR
+name: test
 on:
   pull_request:
     types: [opened,edited]
