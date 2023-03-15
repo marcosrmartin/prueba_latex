@@ -1,7 +1,7 @@
 # Moving Target Defense
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![GitHub](https://img.shields.io/github/license/erseco/moving_target_defense.svg)](https://github.com/erseco/moving_target_defense/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/github/license/erseco/moving_target_defense.svg)](https://github.com/erseco/moving_target_defense/blob/master/LICENSE) 
 [![LaTeX Build](https://travis-ci.com/erseco/moving_target_defense.svg?branch=master)](https://travis-ci.com/erseco/moving_target_defense)
 [![Docker Build](https://github.com/erseco/moving_target_defense/workflows/Docker%20Image%20CI/badge.svg)
 [![Python Tests](https://github.com/erseco/moving_target_defense/workflows/Python%20package/badge.svg)
