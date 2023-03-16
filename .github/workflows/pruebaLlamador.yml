@@ -1,8 +1,8 @@
 name: llamador
 
 on:
-  pull_request:
-    types: [opened,edited]
+  push:
+    types: [opened]
 
 jobs:
   call-workflow-passing-data:
