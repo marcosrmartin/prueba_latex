@@ -11,7 +11,7 @@
 
 Now also in paper form! To be published soon in EvoApplications.
 
-## Abstract
+## Abstract 
 
 Además de realizar una labor determinada de forma eficiente, los servicios informáticos deben ser capaces de evitar los ataques y de detectar los que haya. Una técnica de defensa consiste en convertirse en un "objetivo móvil", que varíe el perfil de forma que los atacantes no lo reconozcan.
 
