@@ -2,9 +2,6 @@ name: checkTemplate
 on:
   pull_request:
     types: [opened,edited]
-    paths: 
-      - "doc/"
-
 
 jobs:
   get-checks:
