@@ -25,7 +25,7 @@ Mediante algoritmos evolutivos trataremos de configurar diferentes servicios de 
  
 ### Autor: Ernesto Serrano Collado
 ### Tutor: Juan Julián Merelo Guervós
-
+ 
 Memoria realizada con LaTeX, para generar el archivo PDF introducir las siguientes órdenes:
 
 ```
