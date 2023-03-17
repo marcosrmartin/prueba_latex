@@ -11,7 +11,7 @@ jobs:
         id: checklist
         uses: JJ/pull-request-checks-action@v3
       - name: Generar PDF
-        if: steps.checklist.outputs.GENERAR
+        if: ${{steps.checklist.outputs.GENERAR == true}}
         uses: xu-cheng/latex-action@v2
         with:
           working_directory: doc/
