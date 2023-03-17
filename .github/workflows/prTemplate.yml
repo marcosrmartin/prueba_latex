@@ -12,24 +12,24 @@ jobs:
     steps:
       - name: Comprobaciones sobre el cuerpo del PR
         uses: actions/github-script@v6
-        env:
-          GENERAR_PDF: false
-          AVANZAR_DOC: false
+        id: checklist
         with:
           script: |
             const checklist = /\s*[-\*]\s+\[\s*([xX]?)\s*\]\s+([\w áéíóú]*):?/gm
             const body = context.payload.pull_request.body
+            let checkDict = {}
             let match = checklist.exec(body)
-            if (match != null) {
+            if (match != null){
+              core.setFailed("❌ Por favor, usa la plantilla proporcionada." )
+            }
+            while (match != null) {
               let value = match[1] ? true : false
               if ( value === false ) {
                   core.warning("⚠️ No has marcado " + match[2] + " ⚠") 
-              }else{
-                if(match[2] === "Generar pdf"){
-                  
-                }
+              }
+              dict[match[2]] = value
               }
               match = checklist.exec(body)
-            }else{
-              core.setFailed("❌ Por favor, usa la plantilla proporcionada." )
             }
+            return dict
+          run: 'echo "${{ steps.checklist }}"; exit 0;'
