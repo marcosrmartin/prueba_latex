@@ -17,7 +17,7 @@ jobs:
           working_directory: doc/
           root_file: text/project.tex
       - name: print
-        run: echo ${{steps.checklist.outputs.GENERAR}}
+        run: echo $GENERAR
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
