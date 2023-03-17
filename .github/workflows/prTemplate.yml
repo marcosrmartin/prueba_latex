@@ -18,7 +18,7 @@ jobs:
 #          working_directory: doc/
 #          root_file: text/project.tex
       - name: print
-        run: echo ${{ steps.checklist.outputs.* }}
+        run: echo ${{ join(steps.pr_body_checks.outputs.*, '\n') }}
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
