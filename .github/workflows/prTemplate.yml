@@ -10,8 +10,9 @@ jobs:
       - name: Comprobaciones sobre el cuerpo del PR
         id: checklist
         uses: JJ/pull-request-checks-action@v3
-#      - name: Generar PDF
-#        if: ${{steps.checklist.outputs.GENERAR == true}}
+      - name: Generar PDF
+        if: ${{steps.checklist.outputs.GENERAR == true}}
+        run: echo TRUE
 #        uses: xu-cheng/latex-action@v2
 #        with:
 #          working_directory: doc/
