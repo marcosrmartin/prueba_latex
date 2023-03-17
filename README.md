@@ -32,7 +32,7 @@ Memoria realizada con LaTeX, para generar el archivo PDF introducir las siguient
 sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-bibtex-extra biber
 make
 ```
-
+ 
 *Memoria y Presentación* liberada bajo la licencia **Creative Commons Attribution-ShareAlike 4.0 International**.
 
 *Código* liberado bajo licencia **GNU GENERAL PUBLIC LICENSE Version 3**.
