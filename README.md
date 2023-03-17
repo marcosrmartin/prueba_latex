@@ -28,7 +28,7 @@ Mediante algoritmos evolutivos trataremos de configurar diferentes servicios de 
 
 Memoria realizada con LaTeX, para generar el archivo PDF introducir las siguientes órdenes:
 
-```
+```ok
 sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-bibtex-extra biber
 make
 ```
