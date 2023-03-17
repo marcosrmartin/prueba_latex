@@ -12,7 +12,7 @@ jobs:
         uses: JJ/pull-request-checks-action@v3
       - name: Generar PDF
         uses: xu-cheng/latex-action@v2
-        if: ${{steps.checklist.outputs.GENERAR}
+        if: ${{steps.checklist.outputs.GENERAR}}
         with:
           working_directory: doc/
           root_file: text/project.tex
