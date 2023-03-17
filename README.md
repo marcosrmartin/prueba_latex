@@ -6,7 +6,7 @@
 [![Docker Build](https://github.com/erseco/moving_target_defense/workflows/Docker%20Image%20CI /badge.svg)
 [![Python Tests](https://github.com/erseco/moving_target_defense/workflows/Python%20package/badge.svg)
 
-
+ 
 ## Sistema de ciberdefensa dinámica basada en algoritmos evolutivos para la prevención de ataques informáticos
 
 Now also in paper form! To be published soon in EvoApplications.
