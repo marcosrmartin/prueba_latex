@@ -21,6 +21,8 @@ jobs:
         run: echo "$GENERAR existe"
       - name: AVANZAR_CHECK
         run: echo "$AVANZAR existe"
+      - name: INVENT_CHECK
+        run: echo "$INVENT existe"
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
