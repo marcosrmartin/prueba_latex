@@ -17,8 +17,19 @@ jobs:
 #        with:
 #          working_directory: doc/
 #          root_file: text/project.tex
-      - name: print
-        run: echo ${{ join(steps.pr_body_checks.outputs.*, '\n') }}
+      - name: GENERAR_CHECK1
+        if: $GENERAR != null
+        run: echo $GENERAR "existe"
+      - name: AVANZAR_CHECK1
+        if: $AVANZAR != null
+        run: echo $AVANZAR "existe"
+      - name: GENERAR_CHECK2
+        if: $GENERAR == null
+        run: echo $GENERAR "NO existe"
+      - name: AVANZAR_CHECK2
+        if: $AVANZAR == null
+        run: echo $AVANZAR "NO existe"
+
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
