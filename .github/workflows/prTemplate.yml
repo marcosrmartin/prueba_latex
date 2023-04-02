@@ -1,15 +1,15 @@
-name: checkTemplate
-on:
-  pull_request:
-    types: [opened,edited]
+#name: checkTemplate
+#on:
+#  pull_request:
+ #   types: [opened,edited]
 
-jobs:
-  get-checks:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Comprobaciones sobre el cuerpo del PR
-        id: pr_body_checks
-        uses: JJ/pull-request-checks-action@v3
+#jobs:
+ # get-checks:
+  #  runs-on: ubuntu-latest
+   # steps:
+    #  - name: Comprobaciones sobre el cuerpo del PR
+     #   id: pr_body_checks
+      #  uses: JJ/pull-request-checks-action@v3
       #- name: Generar PDF
         # if: ${{ steps.checklist.outputs.GENERAR == false }}
        # run: echo FALSE
@@ -17,11 +17,24 @@ jobs:
 #        with:
 #          working_directory: doc/
 #          root_file: text/project.tex
-      - name: Stops if not checked
-        if: ${{ steps.pr_body_checks.outputs.AVANZAR == false}}
-        run: echo "Please read CONTRIBUTING.md" && exit 1
+#      - name: Stops if not checked
+ #       if: ${{ steps.pr_body_checks.outputs.AVANZAR == false}}
+  #      run: echo "Please read CONTRIBUTING.md" && exit 1
 
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v3
-        with:
-          path: project.pdf
+   #   - name: Upload PDF file
+    #    uses: actions/upload-artifact@v3
+     #   with:
+      #    path: project.pdf
+
+name: Obtain values for checklist
+on: [pull_request]
+
+jobs:
+  get-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verifies checklist in PR body
+        id: pr_body_checks
+        uses: JJ/pull-request-checks-action@v3
+      - name: Shows result
+        run: echo $CONTRIBUTING && echo $check0
