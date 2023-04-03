@@ -15,7 +15,7 @@ jobs:
         with:
           root_file: project.tex
           working_directory: doc/text/
-          args: --check es
+          args: --check es --clean
 
       - name: Upload TeXtidote report
         uses: actions/upload-artifact@v2
