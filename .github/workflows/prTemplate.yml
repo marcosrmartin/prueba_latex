@@ -14,8 +14,8 @@ jobs:
         if: ${{ steps.checklist.outputs.GENERAR }}
         uses: xu-cheng/latex-action@v2
         with:
-          working_directory: doc/
-          root_file: text/project.tex
+          working_directory: doc/text/
+          root_file: project.tex
       - name: ubicate
         run: tree
       - name: Stops if not checked
