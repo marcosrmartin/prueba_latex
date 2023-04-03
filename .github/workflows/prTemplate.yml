@@ -16,6 +16,8 @@ jobs:
         with:
           working_directory: doc/
           root_file: text/project.tex
+      - name: ubicate
+        run: tree
       - name: Stops if not checked
         if: ${{ steps.checklist.outputs.AVANZAR == false}}
         run: echo "Please read CONTRIBUTING.md" && exit 1
