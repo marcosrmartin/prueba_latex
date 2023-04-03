@@ -11,7 +11,7 @@ jobs:
         id: checklist
         uses: JJ/pull-request-checks-action@v3
       - name: Generar PDF
-        if: ${{ steps.checklist.outputs.GENERAR == true }}
+        if: ${{ steps.checklist.outputs.GENERAR }}
         uses: xu-cheng/latex-action@v2
         with:
           working_directory: doc/
@@ -19,7 +19,7 @@ jobs:
       - name: ubicate
         run: tree
       - name: Stops if not checked
-        if: ${{ steps.checklist.outputs.AVANZAR == false}}
+        if: ${{ !steps.checklist.outputs.AVANZAR }}
         run: echo "Please read CONTRIBUTING.md" && exit 1
 
       - name: Upload PDF file
