@@ -1,6 +1,6 @@
 name: TeXtidote Action
 on:
-  push:
+  pull_request:
 env:
   IGNORED_RULES: sh:seclen,sh:stacked,sh:nobreak,sh:nonp
   IGNORES_ENVS: otherlanguage,displaymath
@@ -14,7 +14,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v3
       - name: dict
-      - run: 'echo $DICT'
+        run: 'echo $DICT'
       - name: Lint LaTeX document
         uses: ChiefGokhlayeh/textidote-action@v5
         id: lint
