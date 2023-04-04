@@ -14,20 +14,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Lint LaTeX document
         uses: ChiefGokhlayeh/textidote-action@v5
         id: lint
         with:
           root_file: project.tex
-          working_directory: doc/text/
+          working_directory: doc/
           args: --check es --ignore $IGNORED_RULES --remove $IGNORES_ENVS --remove-macros $IGNORED_MACROS
 
       - name: Upload TeXtidote report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: textidote_report
-          path: doc/text/report.html
+          path: doc/report.html
       - name: Throw error if linter warnings exist
         if: ${{ steps.lint.outputs.num_warnings != 0 }}
         run: 'echo "::warning file=project.tex::num_warnings: ${{ steps.lint.outputs.num_warnings }}"; exit 1;'
