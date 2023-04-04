@@ -1,6 +1,5 @@
 name: Errores en LaTeX
-on:
-  pull_request:
+on: pull_request
 env:
   IGNORED_RULES: sh:seclen,sh:stacked,sh:nobreak,sh:nonp
   IGNORES_ENVS: otherlanguage,displaymath
