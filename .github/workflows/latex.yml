@@ -2,7 +2,7 @@ name: TeXtidote Action
 on:
   pull_request:
 env:
-  IGNORED_RULES: sh:seclen,sh:stacked,sh:nonp
+  IGNORED_RULES: sh:seclen,sh:stacked,sh:nonp,sh:nobreak
   IGNORES_ENVS: otherlanguage,displaymath
   IGNORED_MACROS: tableofcontents,listoffigures,listoftables,begin,centeroffset,oddsidemargin,evensidemargin,centering,bfseries,end,cleardoublepage,setlength,textit
   #DICT:= ../.github/workflows/words-allowlist.txt
