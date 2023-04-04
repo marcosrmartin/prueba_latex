@@ -1,8 +1,6 @@
 name: TeXtidote Action
 on:
-  push:
-    paths:
-      - "doc/**"
+  pull_request:
 env:
   IGNORED_RULES: sh:seclen,sh:stacked
   IGNORES_ENVS: otherlanguage,displaymath
@@ -19,7 +17,7 @@ jobs:
         uses: ChiefGokhlayeh/textidote-action@v5
         id: lint
         with:
-          root_file: project.tex
+          root_file: projecto.tex
           working_directory: doc/
           args: --check es --ignore $IGNORED_RULES --remove $IGNORES_ENVS --remove-macros $IGNORED_MACROS
 
