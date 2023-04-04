@@ -5,7 +5,7 @@ env:
   IGNORED_RULES: sh:seclen,sh:stacked
   IGNORES_ENVS: otherlanguage,displaymath
   IGNORED_MACROS: tableofcontents,listoffigures,listoftables,begin,centeroffset,oddsidemargin,evensidemargin,centering,bfseries,end,cleardoublepage,setlength,texttt
-  #DICT:= ../.github/workflows/words-allowlist.txt
+  DICT:= ../words-allowlist.txt
 
 jobs:
   lint_latex:
@@ -19,7 +19,7 @@ jobs:
         with:
           root_file: projecto.tex
           working_directory: doc/
-          args: --check es --ignore $IGNORED_RULES --remove $IGNORES_ENVS --remove-macros $IGNORED_MACROS
+          args: --check es --ignore $IGNORED_RULES --remove $IGNORES_ENVS --remove-macros $IGNORED_MACROS --dict $DICT
 
       - name: Upload TeXtidote report
         uses: actions/upload-artifact@v3
