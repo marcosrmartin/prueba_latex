@@ -14,7 +14,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v3
       - name: dict
-        run: 'echo $DICT'
+        run: 'cat $DICT'
       - name: Lint LaTeX document
         uses: ChiefGokhlayeh/textidote-action@v5
         id: lint
