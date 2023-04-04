@@ -10,16 +10,6 @@ jobs:
       - name: Comprobaciones sobre el cuerpo del PR
         id: checklist
         uses: JJ/pull-request-checks-action@v3
-      - name: get checks
-        run: 'echo ${{ steps.checklist.outputs.AVANZAR }} && echo $steps.checklist.outputs.GENERAR'
       - name: Stops if not checked
-        if: ${{ steps.checklist.outputs.AVANZAR }} == true
+        if: ${{ steps.checklist.outputs.AVANZAR }} == false
         run: echo "Redacta lo hecho en este PR antes de continuar al siguiente." && exit 1
-      - name: Stops if checked
-        if: ${{ steps.checklist.outputs.AVANZAR }} false
-        run: echo "Redacta lo hecho en este PR antes de continuar al siguiente." && exit 1
-
-      #- name: Upload PDF file
-      #  uses: actions/upload-artifact@v3
-      #  with:
-      #    path: doc/project.pdf
