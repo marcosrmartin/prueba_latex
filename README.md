@@ -16,7 +16,7 @@ Now also in paper form! To be published soon in EvoApplications.
 Además de realizar una labor determinada de forma eficiente, los servicios informáticos deben ser capaces de evitar los ataques y de detectar los que haya. Una técnica de defensa consiste en convertirse en un "objetivo móvil", que varíe el perfil de forma que los atacantes no lo reconozcan.
 
 Mediante algoritmos evolutivos trataremos de configurar diferentes servicios de forma que se maximice la diversidad, a la vez que se optimice la seguridad y las prestaciones.
-
+s
 ## Contenido
  
 - Memoria: [pdf](../../releases/download/1.0.0/project.pdf)
