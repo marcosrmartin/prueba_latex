@@ -2,10 +2,11 @@ name: TeXtidote Action
 on:
   pull_request:
 env:
-  IGNORED_RULES: sh:seclen,sh:stacked
+  IGNORED_RULES: sh:seclen,sh:stacked,sh:nobreak,sh:nonp
   IGNORES_ENVS: otherlanguage,displaymath
-  IGNORED_MACROS: tableofcontents,listoffigures,listoftables,begin,centeroffset,oddsidemargin,evensidemargin,centering,bfseries,end,cleardoublepage,setlength,texttt
-  DICT:= ../words-allowlist.txt
+
+  IGNORED_MACROS: tableofcontents,listoffigures,listoftables,begin,centeroffset,oddsidemargin,evensidemargin,centering,bfseries,end,cleardoublepage,setlength,textit
+  DICT: ../words-allowlist.txt
 
 jobs:
   lint_latex:
@@ -17,7 +18,7 @@ jobs:
         uses: ChiefGokhlayeh/textidote-action@v5
         id: lint
         with:
-          root_file: projecto.tex
+          root_file: proyecto.tex
           working_directory: doc/
           args: --check es --ignore $IGNORED_RULES --remove $IGNORES_ENVS --remove-macros $IGNORED_MACROS --dict $DICT
 
