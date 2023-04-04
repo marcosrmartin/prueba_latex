@@ -5,8 +5,8 @@ env:
   IGNORED_RULES: sh:seclen,sh:stacked,sh:nobreak,sh:nonp
   IGNORES_ENVS: otherlanguage,displaymath
   IGNORED_MACROS: tableofcontents,listoffigures,listoftables,begin,centeroffset,oddsidemargin,evensidemargin,centering,bfseries,end,cleardoublepage,setlength,texttt
-  DICT: ./.github/words-allowlist.txt
-
+  #Ya que la action se ejecuta en /doc
+  DICT: ../.github/words-allowlist.txt
 jobs:
   lint_latex:
     runs-on: ubuntu-latest
