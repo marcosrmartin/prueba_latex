@@ -11,7 +11,7 @@ jobs:
         id: checklist
         uses: JJ/pull-request-checks-action@v3
       - name: get checks
-        run: 'echo $steps.checklist.outputs.AVANZAR && echo $steps.checklist.outputs.GENERAR'
+        run: 'echo ${{ steps.checklist.outputs.AVANZAR }} && echo $steps.checklist.outputs.GENERAR'
       - name: Stops if not checked
         if: ${{ steps.checklist.outputs.AVANZAR == true }}
         run: echo "Redacta lo hecho en este PR antes de continuar al siguiente." && exit 1
