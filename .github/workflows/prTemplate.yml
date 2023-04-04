@@ -1,7 +1,5 @@
 name: Check template
-on:
-  pull_request:
-    types: [opened,edited]
+on: pull_request
 
 jobs:
   get-checks:
