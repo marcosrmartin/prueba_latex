@@ -13,5 +13,5 @@ jobs:
       # - name: EVAL
       #   run: 'echo $steps.checklist.outputs.AVANZAR && echo ${{ steps.checklist.outputs.AVANZAR }} && ${{ steps.checklist.outputs.AVANZAR == false}} && ${{ steps.checklist.outputs.AVANZAR == true}} && ${{ steps.checklist.outputs.AVANZAR }} == false && ${{ steps.checklist.outputs.AVANZAR }} == true'
       - name: Aborta si no avanza
-        if: ${{ steps.checklist.outputs.AVANZAR }} == false
+        if: ${{ steps.checklist.outputs.AVANZAR  == 'false' }}
         run: echo "Redacta lo hecho en este PR antes de continuar al siguiente." && exit 1
