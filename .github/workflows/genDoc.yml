@@ -1,8 +1,8 @@
 name: Genera PDF
-on: push
-  # push:
-  #   branches:
-  #     - master
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   genera_pdf:
