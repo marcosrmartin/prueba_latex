@@ -1,7 +1,7 @@
 name: Errores en LaTeX
 on: pull_request 
 env:
-  IGNORED_RULES: sh:seclen,sh:stacked,sh:nobreak,sh:nonp,lt:es:COMMMA_PARENTHESIS_WHITESPACE
+  IGNORED_RULES: sh:seclen,sh:stacked,sh:nobreak,sh:nonp,lt:es:COMMA_PARENTHESIS_WHITESPACE
   IGNORES_ENVS: otherlanguage,displaymath
   IGNORED_MACROS: tableofcontents,listoffigures,listoftables,begin,centeroffset,oddsidemargin,evensidemargin,centering,bfseries,end,cleardoublepage,setlength,textit,
   #Ya que la action se ejecuta en /doc
